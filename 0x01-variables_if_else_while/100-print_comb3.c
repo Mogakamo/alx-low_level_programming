@@ -11,6 +11,8 @@ int main(void)
 
 	for (i = 48; j < 58; j++)
 	{
+		for (j = i; j < 58; j++)
+		{	
 		if (i == j)
 		{
 			continue;
@@ -28,6 +30,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+	    }
 	}
 	putchar('\n');
 	return (0);
