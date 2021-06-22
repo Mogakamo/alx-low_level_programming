@@ -1,7 +1,6 @@
 #include "holberton.h"
 
 /**
- *
  * main - check for the code for ALX students
  *
  * Return: 0
