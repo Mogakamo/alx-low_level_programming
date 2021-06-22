@@ -37,4 +37,7 @@ int add(int, int);
 /* 11-print_to_98.c */
 void print_to_98(int n);
 
+/* 100-times_table.c */
+void print_times_table(int);
+
 #endif
