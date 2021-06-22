@@ -1,4 +1,4 @@
-#include "Holberton.h"
+#include "holberton.h"
 
 /**
  * main - Prints Holberton 
