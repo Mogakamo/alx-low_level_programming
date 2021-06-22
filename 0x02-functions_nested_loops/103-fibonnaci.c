@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints sum of fibo numbers under 4,000,000
+ * main - Prints sum of fibo numbers under 4,000,000
  * Return: 0
  */
 int main(void)
