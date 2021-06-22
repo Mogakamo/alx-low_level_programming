@@ -1,10 +1,9 @@
 #include "holberton.h"
-
 /**
- * powB - raises the number base to power power
- * @base : the base
- * @power : the power
- * Return: return the power
+ *powB - raises the number base to power power
+ *@base : the base
+ *@power : the power
+ *Return: return the answer
  */
 int powB(int base, int power)
 {
@@ -18,10 +17,9 @@ int powB(int base, int power)
 }
 
 /**
- * numLength - return the length of the string
- * @num : operand number
- * Return: number of the digit
- *
+ *numLength - returns the lenth of string
+ *@num : operand number
+ *Return: number of digits
  */
 int numLength(int num)
 {
@@ -34,40 +32,37 @@ int numLength(int num)
 
 	while (num)
 	{
-		/* code */
 		num = num / 10;
 		length += 1;
 	}
+
+
 	return (length);
 }
 
 /**
- * putnchar - Print a number of any digit
- * @num : takes the input number
+ *putnchar - Print a number of any any digit
+ *@num : takes an input number
+ *
+ *
  */
-
 void putnchar(int num)
 {
 
 	int length = numLength(num), j = length - 1, k, tmp2, digit1;
 
 	if (num == 0)
-	{
-		/* code */
 		_putchar(48);
-	}
 	else
 	{
+
 		while (j >= 0)
 		{
-			/* code */
 			if (num % powB(10, j) == 0 && j != 0)
 			{
-				/* code */
 				_putchar(48 + num / powB(10, j));
-				for (k = j; k > 0; k++)
+				for (k = j; k > 0 ; k--)
 				{
-					/* code */
 					_putchar(48);
 				}
 				j = -1;
@@ -80,48 +75,44 @@ void putnchar(int num)
 				num -= powB(10, j) * digit1;
 				if (numLength(tmp2) - numLength(num) == 2)
 				{
-					/* code */
-					-putchar(48);
+					_putchar(48);
 					j--;
 				}
 				j--;
 			}
 		}
 	}
+
 }
 
 /**
- * print_times_table - prints multiplication for factor n
- * @n : interger n
+ * print_times_table - print multiplication table for factor of n
+ * @n: integer n
  */
-
 void print_times_table(int n)
 {
-	int i, j, product, m;
+	int i, j, prod, m;
 
 	if (n < 16 && n >= 0)
 	{
-		/* code */
 		for (i = 0; i <= n; i++)
 		{
-			/* code */
 			for (j = 0; j <= n; j++)
 			{
-				/* code */
-				product = i * j;
-				putnchar(product);
+				prod = i * j;
+				putnchar(prod);
 				if (j != n)
 				{
-					/* code */
 					_putchar(',');
+
 					for (m = 0; m < 4 - numLength(i * (j + 1)); m++)
 					{
-						/* code */
 						_putchar(' ');
 					}
 				}
-				_putchar('\n');
+
 			}
+			_putchar('\n');
 		}
 	}
 }
