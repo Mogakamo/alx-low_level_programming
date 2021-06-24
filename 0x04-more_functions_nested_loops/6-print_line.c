@@ -1,24 +1,24 @@
 #include "holberton.h"
-
 /**
- * print_line - draws a straight line in the terminal
- * @n: number of times the line character should be printed
+ *print_line - prints a line n chars long.
+ *@n: length of line.
  *
- * Return: no return
+ *Return: void.
  */
 void print_line(int n)
 {
-int i;
+	int i;
 
-if (n > 0)
-{
-for (i = 0; i < n; i++)
-{
-_putchar('_');
-}
-_putchar('\n');
-}
-else if (n <= 0)
-{
-_putchar('\n');
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (i = 1; i <= n; i++)
+		{
+			_putchar('_');
+		}
+	_putchar('\n');
+	}
 }
