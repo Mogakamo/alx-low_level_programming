@@ -4,7 +4,7 @@
  *_strlen - return the length of a str
  *@s: string
  *Return: lenght of a str
- * /
+ */
 int _strlen(char *s)
 {
 	int i;
