@@ -4,37 +4,33 @@
 /**
  * isLower - determines whether ascii is lowercase
  * @c: character
- * Return: 1 or 0
+ * Return: 1 if true, 0 if false
  */
 int isLower(char c)
 {
-	return (c >= 97 && c <= 122);	
+	return (c >= 97 && c <= 122);
 }
 
 /**
- * isDelimiter - determines whether the ascii is a delimeter
+ * isDelimiter - determines whether ascii is a delimiter
  * @c: character
- * Return: 1 or 0
+ * Return: 1 if true, 0 if false
  */
-
 int isDelimiter(char c)
 {
 	int i;
 	char delimiter[] = " \t\n,.!?\"(){}";
 
 	for (i = 0; i < 12; i++)
-	{
 		if (c == delimiter[i])
 			return (1);
-
-	}
 	return (0);
 }
 
 /**
- * cap_string - capitalize all words of a string
+ * cap_string - capitalizes all words of a string
  * @s: input string
- * Return: string with capitalised words
+ * Return: string with capitalized words
  */
 char *cap_string(char *s)
 {
@@ -51,7 +47,7 @@ char *cap_string(char *s)
 			foundDelimit = 0;
 		}
 		else
-			foundDelimit = 0
+			foundDelimit = 0;
 		s++;
 	}
 	return (ptr);
