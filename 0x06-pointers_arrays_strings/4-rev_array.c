@@ -1,30 +1,31 @@
-#include "holberton.h"
-
 /**
- * swap_int - swaps the value of two intergers
+ * swap_int - swaps the value of two integers
  * @a: pointer a
  * @b: pointer b
  */
 void swap_int(int *a, int *b)
 {
 	*a = *b + *a;
-	*b = *a = *b;
+	*b = *a - *b;
 	*a = *a - *b;
 }
 
 /**
- * reverse_array - reverses the content of an array of integers
- * @a: array
- * @n: number of elements of the array
- * Return: reversed array
+ * reverse_array - reverses the contents of an array of integers
+ * @a: array of integers
+ * @n: number of elements
  */
+
 void reverse_array(int *a, int n)
 {
-	int c = 0;
+	int counter = 0;
 
-	while (c < n / 2)
+	while (counter < n / 2)
 	{
-		swap_int(a + counter, a + (n - c - 1));
-		c++;
+		/*if you have an  array of n elements the last element is at n - 1*/
+		swap_int(a + counter, a + (n - counter - 1));
+		counter++;
 	}
+
+
 }
