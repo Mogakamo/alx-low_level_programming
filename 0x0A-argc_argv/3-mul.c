@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+#include "holberton.h"
 /**
  * main - multiplies two arguments and prints result
  * @argc: argument count
