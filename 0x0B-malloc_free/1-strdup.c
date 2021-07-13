@@ -1,54 +1,33 @@
 #include <stdlib.h>
-#include "holberton.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string s
- * Return: length of string
+ * _strdup - Return pointer to a new string that duplicates given string,
+ * allocate mem w/ malloc
+ * @str: String to duplicate
+ *
+ * Return: Pointer to new string, NULL if failed to make memory
  */
-int _strlen(char *s)
+char *_strdup(char *str)
 {
-	int length = 0;
+	char *nstr;
+	unsigned int i, len;
 
-	while (*s)
-	{
-		s++;
-		length++;
-	}
-	return (length);
-}
-
-/**
- * str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: concatenated strings
- */
-char *str_concat(char *s1, char *s2)
-{
-	char *cat, *_cat;
-
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	cat = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2)) + 1);
-	if (!cat)
+	if (str == NULL)
 		return (NULL);
-	_cat = cat;
-	while (*s1)
+	i = len = 0;
+	while (str[len] != '\0')
 	{
-		*_cat = *s1;
-		_cat++;
-		s1++;
+		len++;
 	}
-	while (*s2)
+	len++;
+	nstr = malloc(len * sizeof(*str));
+	if (nstr == NULL)
+		return (NULL);
+	while (i <= len)
 	{
-		*_cat = *s2;
-		_cat++;
-		s2++;
+		nstr[i] = str[i];
+		i++;
 	}
-	*_cat = '\0';
-	return (cat);
+	return (nstr);
 }
+
