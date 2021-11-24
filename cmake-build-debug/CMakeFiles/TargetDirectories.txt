@@ -1,3 +1,0 @@
-/home/amos/alx/alx-low_level_programming/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/amos/alx/alx-low_level_programming/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/amos/alx/alx-low_level_programming/cmake-build-debug/CMakeFiles/alx_low_level_programming.dir
