@@ -6,5 +6,6 @@
 
 /* 0 - Linear Search */
 int linear_search(int *array, size_t size, int value);
-
+/* 1 - Binary Search */
+int binary_search(int *array, size_t size, int value);
 #endif
