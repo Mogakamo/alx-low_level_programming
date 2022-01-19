@@ -4,8 +4,8 @@
  * linear_search - searches for a vale in a list
  * @array: Array that will have the linear search being performed
  * @size: number of elements in the array
- * @value: the value to be searched for 
- * Return: first index where the value is located 
+ * @value: the value to be searched for
+ * Return: first index where the value is located
  */
 
 int linear_search(int *array, size_t size, int value)
